@@ -284,7 +284,7 @@ const CreateAssignment: React.FC<CreateAssignmentProps> = ({
           </div>
 
           <div className="space-y-3">
-            {(cfg.questionPatterns || []).map((pattern: QuestionPattern, i) => (
+            {(cfg.questionPatterns || []).map((pattern: QuestionPattern, i: number) => (
               <div
                 key={i}
                 className="grid grid-cols-12 gap-4 items-center animate-in fade-in slide-in-from-left-2 duration-300"
