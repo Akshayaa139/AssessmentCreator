@@ -94,7 +94,7 @@ export async function setupAIGeneration(
       subject: config.subject || config.topic,
       grade: config.grade,
       duration: config.duration || "60 mins",
-      dueDate: config.dueDate,
+      ...(config.dueDate ? { dueDate: config.dueDate } : {}),
       totalMarks,
       sections: (config.questionPatterns || []).map((pattern, index) => ({
         title: `Section ${String.fromCharCode(65 + index)}`,
@@ -144,7 +144,9 @@ export async function setupAIGeneration(
     exam.subject = exam.subject || config.subject || config.topic;
     exam.grade = exam.grade || config.grade;
     exam.duration = exam.duration || config.duration || "60 mins";
-    exam.dueDate = config.dueDate;
+    if (config.dueDate) {
+      exam.dueDate = config.dueDate;
+    }
 
     // Calculate total marks if not provided correctly
     exam.totalMarks = exam.sections.reduce(
