@@ -3,6 +3,7 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 import { useAppStore } from "@/store/useAppStore";
+import type { QuestionPattern } from "@/types";
 import {
   ChevronRight,
   ChevronLeft,
@@ -283,7 +284,7 @@ const CreateAssignment: React.FC<CreateAssignmentProps> = ({
           </div>
 
           <div className="space-y-3">
-            {(cfg.questionPatterns || []).map((pattern, i) => (
+            {(cfg.questionPatterns || []).map((pattern: QuestionPattern, i) => (
               <div
                 key={i}
                 className="grid grid-cols-12 gap-4 items-center animate-in fade-in slide-in-from-left-2 duration-300"
