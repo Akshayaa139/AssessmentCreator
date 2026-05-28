@@ -1,0 +1,410 @@
+[
+  {
+    "id": "l8kk5d",
+    "title": "Comprehensive Exam: Data Analysis",
+    "institution": "Global Education Institute",
+    "subject": "Data",
+    "grade": "12th Grade",
+    "duration": "30 mins",
+    "totalMarks": 20,
+    "sections": [
+      {
+        "title": "Section A: Multiple Choice Questions",
+        "instructions": "Choose the best answer for each question. Each question carries 1 mark.",
+        "questions": [
+          {
+            "id": "mcq1",
+            "type": "mcq",
+            "question": "What is the primary purpose of a data warehouse in the context of CityCare Hospitals?",
+            "options": [
+              "To process daily patient transactions rapidly",
+              "To store raw, uncleaned patient data for backups",
+              "To enable centralized analytical reporting and trend analysis",
+              "To manage real-time updates for patient records"
+            ],
+            "answer": "To enable centralized analytical reporting and trend analysis",
+            "marks": 1,
+            "difficulty": "medium"
+          },
+          {
+            "id": "mcq2",
+            "type": "mcq",
+            "question": "Which of the following would most likely be a fact table in the CityCare Hospitals data warehouse scenario?",
+            "options": [
+              "Patient_Demographics",
+              "Doctor_Details",
+              "Admission_Fact",
+              "Hospital_Branch_Location"
+            ],
+            "answer": "Admission_Fact",
+            "marks": 1,
+            "difficulty": "medium"
+          },
+          {
+            "id": "mcq3",
+            "type": "mcq",
+            "question": "The 'T' in the ETL process for integrating data from multiple hospital databases stands for:",
+            "options": [
+              "Transfer",
+              "Transform",
+              "Translate",
+              "Terminate"
+            ],
+            "answer": "Transform",
+            "marks": 1,
+            "difficulty": "easy"
+          },
+          {
+            "id": "mcq4",
+            "type": "mcq",
+            "question": "Which schema model is most commonly recommended for data warehousing due to its simplicity and query performance?",
+            "options": [
+              "Relational Model",
+              "Hierarchical Model",
+              "Network Model",
+              "Star Schema"
+            ],
+            "answer": "Star Schema",
+            "marks": 1,
+            "difficulty": "medium"
+          },
+          {
+            "id": "mcq5",
+            "type": "mcq",
+            "question": "If the management of CityCare Hospitals wants to view disease prevalence from a national level down to a specific city, which OLAP operation would be most appropriate?",
+            "options": [
+              "Roll-up",
+              "Drill-down",
+              "Slice",
+              "Pivot"
+            ],
+            "answer": "Drill-down",
+            "marks": 1,
+            "difficulty": "medium"
+          },
+          {
+            "id": "mcq6",
+            "type": "mcq",
+            "question": "When building a healthcare data warehouse, which of the following is a paramount concern regarding patient data?",
+            "options": [
+              "Data redundancy",
+              "Data privacy and security",
+              "Data volume reduction",
+              "Data transfer speed"
+            ],
+            "answer": "Data privacy and security",
+            "marks": 1,
+            "difficulty": "medium"
+          },
+          {
+            "id": "mcq7",
+            "type": "mcq",
+            "question": "What is the primary goal of the Attribute-Oriented Induction (AOI) technique?",
+            "options": [
+              "To find outliers in a dataset",
+              "To classify individual records into predefined categories",
+              "To discover generalized rules and patterns from low-level data",
+              "To predict future values based on historical data"
+            ],
+            "answer": "To discover generalized rules and patterns from low-level data",
+            "marks": 1,
+            "difficulty": "medium"
+          },
+          {
+            "id": "mcq8",
+            "type": "mcq",
+            "question": "In the Student_Performance dataset, which attribute is most suitable for defining a concept hierarchy to generalize location information?",
+            "options": [
+              "Student_ID",
+              "Marks",
+              "Course",
+              "City"
+            ],
+            "answer": "City",
+            "marks": 1,
+            "difficulty": "easy"
+          },
+          {
+            "id": "mcq9",
+            "type": "mcq",
+            "question": "Calculating the 'average marks by department and state' from the Student_Performance dataset involves which data generalization technique?",
+            "options": [
+              "Attribute removal",
+              "Data aggregation",
+              "Tuple generalization",
+              "Concept hierarchy definition"
+            ],
+            "answer": "Data aggregation",
+            "marks": 1,
+            "difficulty": "medium"
+          },
+          {
+            "id": "mcq10",
+            "type": "mcq",
+            "question": "After data generalization and aggregation steps in AOI, what is the final step described for summarizing overall trends?",
+            "options": [
+              "Data cleaning",
+              "Data visualization",
+              "Generalized rule formation",
+              "Data partitioning"
+            ],
+            "answer": "Generalized rule formation",
+            "marks": 1,
+            "difficulty": "medium"
+          }
+        ]
+      },
+      {
+        "title": "Section B: Short Answer Questions",
+        "instructions": "Answer the following questions concisely. Each question carries 2 marks.",
+        "questions": [
+          {
+            "id": "saq1",
+            "type": "short",
+            "question": "For the CityCare Hospitals data warehouse, identify two potential dimension tables and briefly explain the type of information each would store.",
+            "answer": "1. Patient Dimension: Stores descriptive attributes about patients like Patient_ID, Name, Age, Gender, Address. It helps analyze patient demographics related to admissions or treatments.\n2. Doctor Dimension: Stores information about doctors such as Doctor_ID, Name, Specialty, Years of Experience. It's used to analyze doctor performance or treatment patterns by specialty.",
+            "marks": 2,
+            "difficulty": "medium"
+          },
+          {
+            "id": "saq2",
+            "type": "short",
+            "question": "Outline two critical ETL steps required to integrate data from the multiple disparate hospital databases of CityCare Hospitals into a centralized data warehouse.",
+            "answer": "1. Extraction: Collecting data from the diverse source systems of each hospital branch. This involves connecting to various databases and extracting relevant data.\n2. Transformation: Cleaning, standardizing, and integrating the extracted data. This includes resolving inconsistencies (e.g., different date formats, diagnosis codes), handling missing values, and converting data into a consistent format suitable for the data warehouse schema.",
+            "marks": 2,
+            "difficulty": "medium"
+          },
+          {
+            "id": "saq3",
+            "type": "short",
+            "question": "Describe how the 'Drill-down' OLAP operation can be utilized for disease trend analysis in the CityCare Hospitals data warehouse.",
+            "answer": "Drill-down allows users to navigate from a higher level of data summarization to a lower, more detailed level. For disease trend analysis, one could start with the total count of a disease across all hospitals (high level) and then 'drill-down' to see the prevalence in individual states, then further 'drill-down' to specific cities, or even individual hospital branches within a city. This helps pinpoint specific areas or populations affected by a disease.",
+            "marks": 2,
+            "difficulty": "medium"
+          },
+          {
+            "id": "saq4",
+            "type": "short",
+            "question": "Suggest a two-level concept hierarchy for the 'City' attribute in the Student_Performance dataset and explain its utility in Attribute-Oriented Induction.",
+            "answer": "A two-level concept hierarchy for 'City' could be:\nLevel 0: Specific City (e.g., Coimbatore, Chennai, Kochi)\nLevel 1: State (e.g., Tamil Nadu, Kerala)\n\nUtility: This hierarchy allows for generalization. Instead of analyzing performance by individual cities, the system can 'roll-up' or generalize the 'City' attribute to 'State'. This helps in discovering broader patterns like 'students from Tamil Nadu perform better in certain courses' rather than fragmented patterns specific to individual cities.",
+            "marks": 2,
+            "difficulty": "medium"
+          },
+          {
+            "id": "saq5",
+            "type": "short",
+            "question": "Explain how data generalization, as part of the Attribute-Oriented Induction (AOI) technique, aids in forming generalized rules about student performance based on the provided dataset.",
+            "answer": "Data generalization in AOI replaces low-level data with higher-level concepts from concept hierarchies. For the Student_Performance dataset, instead of using 'Coimbatore', it could be generalized to 'Tamil Nadu'. This process reduces the number of distinct attribute values, thereby consolidating similar records. By reducing detail, AOI can then identify more concise and significant patterns or rules (e.g., 'Students from Tamil Nadu in CSE department typically score above 80%') that might be obscured by the high granularity of individual records.",
+            "marks": 2,
+            "difficulty": "medium"
+          }
+        ]
+      }
+    ],
+    "dueDate": "2026-05-29",
+    "owner": "professor.edu@univ.com"
+  },
+  {
+    "id": "ea9g7b",
+    "title": "Data Analysis Exam",
+    "institution": "Generic University",
+    "subject": "Data Analysis",
+    "grade": "12th Grade",
+    "duration": "30 mins",
+    "totalMarks": 20,
+    "sections": [
+      {
+        "title": "Section A: Multiple Choice Questions",
+        "instructions": "Choose the best answer for each question. Each question carries 1 mark.",
+        "questions": [
+          {
+            "id": "q1",
+            "type": "mcq",
+            "question": "What is the primary purpose of a data warehouse in the CityCare Hospitals scenario?",
+            "options": [
+              "A) Transaction processing",
+              "B) Real-time patient monitoring",
+              "C) Analytical reporting and trend analysis",
+              "D) Individual patient record management"
+            ],
+            "answer": "C) Analytical reporting and trend analysis",
+            "marks": 1,
+            "difficulty": "medium"
+          },
+          {
+            "id": "q2",
+            "type": "mcq",
+            "question": "Which of the following is most likely to be a fact table in the CityCare Hospitals data warehouse for analyzing patient activity?",
+            "options": [
+              "A) Doctor",
+              "B) Patient",
+              "C) Admission",
+              "D) Disease"
+            ],
+            "answer": "C) Admission",
+            "marks": 1,
+            "difficulty": "medium"
+          },
+          {
+            "id": "q3",
+            "type": "mcq",
+            "question": "Which of the following is an example of a dimension table in the CityCare Hospitals data warehouse?",
+            "options": [
+              "A) Total_Cost",
+              "B) Admission_Count",
+              "C) Patient_Demographics",
+              "D) Average_Stay_Duration"
+            ],
+            "answer": "C) Patient_Demographics",
+            "marks": 1,
+            "difficulty": "medium"
+          },
+          {
+            "id": "q4",
+            "type": "mcq",
+            "question": "What does ETL stand for in the context of data warehousing?",
+            "options": [
+              "A) Extract, Transform, Load",
+              "B) Enter, Translate, Log",
+              "C) Elaborate, Test, Learn",
+              "D) Execute, Transmit, Link"
+            ],
+            "answer": "A) Extract, Transform, Load",
+            "marks": 1,
+            "difficulty": "medium"
+          },
+          {
+            "id": "q5",
+            "type": "mcq",
+            "question": "Which OLAP operation involves changing the perspective of data by replacing an existing dimension attribute with a new one (e.g., changing rows from showing 'City' to 'State')?",
+            "options": [
+              "A) Drill-down",
+              "B) Roll-up",
+              "C) Slice",
+              "D) Pivot (Rotate)"
+            ],
+            "answer": "D) Pivot (Rotate)",
+            "marks": 1,
+            "difficulty": "medium"
+          },
+          {
+            "id": "q6",
+            "type": "mcq",
+            "question": "The 'Marks' attribute in the Student_Performance dataset would typically be generalized into what kind of concept hierarchy to represent performance levels?",
+            "options": [
+              "A) Nominal hierarchy",
+              "B) Ordinal hierarchy (e.g., 'Excellent', 'Good', 'Average')",
+              "C) Categorical hierarchy",
+              "D) Spatial hierarchy"
+            ],
+            "answer": "B) Ordinal hierarchy (e.g., 'Excellent', 'Good', 'Average')",
+            "marks": 1,
+            "difficulty": "medium"
+          },
+          {
+            "id": "q7",
+            "type": "mcq",
+            "question": "Which of these is a core objective of Attribute-Oriented Induction (AOI)?",
+            "options": [
+              "A) To predict future student performance",
+              "B) To find detailed individual student records",
+              "C) To summarize data into generalized, high-level patterns",
+              "D) To identify specific data entry errors"
+            ],
+            "answer": "C) To summarize data into generalized, high-level patterns",
+            "marks": 1,
+            "difficulty": "medium"
+          },
+          {
+            "id": "q8",
+            "type": "mcq",
+            "question": "What is a 'concept hierarchy' in the context of data generalization?",
+            "options": [
+              "A) A list of all unique values for an attribute",
+              "B) A system for organizing attributes from primitive to higher-level concepts",
+              "C) A method for removing duplicate data",
+              "D) A database schema for storing concepts"
+            ],
+            "answer": "B) A system for organizing attributes from primitive to higher-level concepts",
+            "marks": 1,
+            "difficulty": "medium"
+          },
+          {
+            "id": "q9",
+            "type": "mcq",
+            "question": "If you apply AOI to generalize student 'City' to 'State' in the Student_Performance dataset, what type of data generalization operation are you primarily performing?",
+            "options": [
+              "A) Attribute removal",
+              "B) Attribute generalization by replacing low-level concepts with higher-level concepts",
+              "C) Aggregation",
+              "D) Data Cube creation"
+            ],
+            "answer": "B) Attribute generalization by replacing low-level concepts with higher-level concepts",
+            "marks": 1,
+            "difficulty": "medium"
+          },
+          {
+            "id": "q10",
+            "type": "mcq",
+            "question": "What is the main purpose of 'Generalized Rule Formation' in Attribute-Oriented Induction (AOI)?",
+            "options": [
+              "A) To define the schema for the raw data",
+              "B) To create association rules between specific data points",
+              "C) To express discovered patterns in a concise and understandable form",
+              "D) To establish primary and foreign key relationships"
+            ],
+            "answer": "C) To express discovered patterns in a concise and understandable form",
+            "marks": 1,
+            "difficulty": "medium"
+          }
+        ]
+      },
+      {
+        "title": "Section B: Short Answer Questions",
+        "instructions": "Answer the following questions concisely. Each question carries 2 marks.",
+        "questions": [
+          {
+            "id": "q11",
+            "type": "short",
+            "question": "In the CityCare Hospitals scenario, describe two potential fact tables and their corresponding measures.",
+            "answer": "1. Admission_Fact: Measures like Number_of_Admissions, Total_Stay_Duration. 2. Billing_Fact: Measures like Total_Billed_Amount, Total_Payment_Received.",
+            "marks": 2,
+            "difficulty": "medium"
+          },
+          {
+            "id": "q12",
+            "type": "short",
+            "question": "Outline the key steps involved in the ETL process for integrating data from CityCare's multiple hospital branches into a central data warehouse.",
+            "answer": "1. Extract: Data is collected from various operational systems across all branches. 2. Transform: Data is cleaned, standardized, aggregated, and mapped to the data warehouse schema, resolving inconsistencies. 3. Load: The transformed data is loaded into the data warehouse.",
+            "marks": 2,
+            "difficulty": "medium"
+          },
+          {
+            "id": "q13",
+            "type": "short",
+            "question": "Illustrate how a 'drill-down' OLAP operation could be used for disease trend analysis in the CityCare Hospitals data warehouse.",
+            "answer": "Starting from 'Total admissions for Respiratory Diseases by State', a drill-down operation could show 'Total admissions for specific Respiratory Diseases (e.g., Asthma, Pneumonia) by City' to identify granular disease prevalence patterns.",
+            "marks": 2,
+            "difficulty": "medium"
+          },
+          {
+            "id": "q14",
+            "type": "short",
+            "question": "Suggest two mechanisms for ensuring data security and privacy for patient data in the CityCare Hospitals data warehouse.",
+            "answer": "1. Role-Based Access Control (RBAC): Granting access to data only based on user roles and job functions. 2. Data Anonymization/Masking: Removing or obfuscating personally identifiable information (PII) for analytical purposes where individual identification is not required.",
+            "marks": 2,
+            "difficulty": "medium"
+          },
+          {
+            "id": "q15",
+            "type": "short",
+            "question": "Based on the `Student_Performance` dataset, propose a concept hierarchy for the 'City' attribute and explain how it facilitates data generalization.",
+            "answer": "Concept Hierarchy for City: 'Street' -> 'City' (e.g., Coimbatore, Chennai) -> 'State' (e.g., Tamil Nadu, Kerala) -> 'Country'. This hierarchy facilitates data generalization by allowing analysis to move from specific cities to broader states, enabling summarized views of student performance at a regional level.",
+            "marks": 2,
+            "difficulty": "medium"
+          }
+        ]
+      }
+    ]
+  }
+]

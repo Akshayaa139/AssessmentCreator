@@ -1,0 +1,172 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #f9fafb;
+  --color-foreground: #1e1e1e;
+  --color-primary: #fb7a58;
+  --color-primary-foreground: #ffffff;
+  --color-accent: #6366f1;
+}
+
+:root {
+  --background: #f9fafb;
+  --foreground: #1e1e1e;
+  --primary: #fb7a58;
+  --primary-foreground: #ffffff;
+  --accent: #6366f1;
+  --card-shadow: 0px 4px 24px rgba(0, 0, 0, 0.04);
+  --btn-glow: 0px 8px 16px rgba(251, 122, 88, 0.2);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-[#FB7A58] text-white px-6 py-2.5 rounded-2xl font-bold hover:bg-[#e0694b] transition-all shadow-lg shadow-[#FB7A58]/20 active:scale-95;
+  }
+
+  .btn-dark {
+    @apply bg-[#1E1E1E] text-white px-6 py-3 rounded-2xl font-bold hover:bg-black transition-all shadow-xl shadow-black/5 active:scale-95;
+  }
+
+  .card {
+    @apply bg-white border border-[#F1F3F5] rounded-[24px] shadow-sm;
+    box-shadow: var(--card-shadow);
+  }
+
+  .input-field {
+    @apply w-full px-5 py-3.5 bg-[#F9FAFB] border border-[#E9ECEF] rounded-2xl focus:outline-none focus:ring-2 focus:ring-[#FB7A58]/20 focus:border-[#FB7A58] transition-all;
+  }
+
+  /* ... animations ... */
+  @keyframes pulse-soft {
+
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.8;
+    }
+  }
+
+  @keyframes bounce-subtle {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+
+  .animate-pulse-soft {
+    animation: pulse-soft 3s infinite ease-in-out;
+  }
+
+  .animate-bounce-subtle {
+    animation: bounce-subtle 3s infinite ease-in-out;
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .nav-active {
+    @apply bg-[#F9FAFB] text-[#1E1E1E] font-bold shadow-sm;
+  }
+
+  .progress-bar {
+    width: 100%;
+    height: 100%;
+    appearance: none;
+    border: none;
+    background: transparent;
+  }
+
+  .progress-bar::-webkit-progress-bar {
+    background: transparent;
+  }
+
+  .progress-bar::-webkit-progress-value {
+    background: #fb7a58;
+    transition: width 0.3s ease;
+  }
+
+  .progress-bar::-moz-progress-bar {
+    background: #fb7a58;
+    transition: width 0.3s ease;
+  }
+}
+
+/* Print Styles */
+@media print {
+  @page {
+    margin: 2cm;
+    size: auto;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  /* Force all parents to be visible and have full height */
+  html,
+  body,
+  #__next,
+  main,
+  div {
+    height: auto !important;
+    overflow: visible !important;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+    position: static !important;
+  }
+
+  body {
+    background: white !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .exam-page {
+    border: none !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  /* Prevent question splitting across pages */
+  .group {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* Ensure headers stand out in print */
+  h2,
+  h3 {
+    page-break-after: avoid !important;
+    break-after: avoid !important;
+  }
+
+  /* Custom background printing */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}
