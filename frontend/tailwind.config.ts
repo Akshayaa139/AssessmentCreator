@@ -13,8 +13,6 @@ const config: Config = {
       },
     },
   },
-  // Ensure PostCSS plugins respect our config
-  corePlugins: {},
 };
 
 export default config;
