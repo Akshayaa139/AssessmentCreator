@@ -34,7 +34,7 @@ interface AppState {
   ) => void;
   setGenerating: (isGenerating: boolean) => void;
   resetConfig: () => void;
-  loadExams: () => Promise<void>;
+  loadExams: (ownerEmail?: string) => Promise<void>;
 }
 
 export const useAppStore = create<AppState>()(
